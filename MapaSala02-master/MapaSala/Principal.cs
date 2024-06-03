@@ -33,5 +33,34 @@ namespace MapaSala
             frmSalas s = new frmSalas();
             s.ShowDialog();
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void professoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProfessores p = new frmProfessores();
+            p.ShowDialog();
+        }
+
+        private void disciplinasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDisciplinas d = new frmDisciplinas();
+            d.ShowDialog();
+        }
+
+        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCurso c = new frmCurso();
+            c.ShowDialog();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios u = new frmUsuarios();
+            u.ShowDialog();
+        }
     }
 }

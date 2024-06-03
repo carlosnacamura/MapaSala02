@@ -29,8 +29,7 @@ namespace MapaSala.Formularios
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             SalasEntidade sala = new SalasEntidade();
-            sala.Id = Convert.ToInt32(txtId.Text);
-            sala.Nome = txtNome.Text;
+            sala.Id = Convert.ToInt32(numId.Value);
             sala.IsLab = chkIsLab.Checked;
             sala.NumeroCadeiras = Convert.ToInt32(txtNumCadeira.Value);
             sala.NumeroComputadores = Convert.ToInt32(txtNumPc.Value);
