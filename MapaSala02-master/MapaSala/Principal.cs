@@ -45,5 +45,10 @@ namespace MapaSala
             frmDisciplina d = new frmDisciplina();
             d.ShowDialog();
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

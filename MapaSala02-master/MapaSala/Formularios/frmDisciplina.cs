@@ -29,8 +29,34 @@ namespace MapaSala.Formularios
             d.Sigla = txtSigla.Text;
 
             dados.Add(d);
+            LimparDados();
+        }
+        private void LimparDados()
+        {
+            TextBox[] txt = new TextBox[] { txtNomeDisciplina, txtSigla };
+            foreach(TextBox t in txt)
+            {
+                t.Text = "";
+            }
+            numId.Value = 0;
+        }
+        private void frmDisciplina_Load(object sender, EventArgs e)
+        {
+
         }
 
-        
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparDados();
+        }
+        private object[] Linha()
+        {
+            return new object[] { Id, Nome, Sigla };
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            dtGridDisciplina.Rows.RemoveAt(LinhaSelecionada);
+        }
     }
 }

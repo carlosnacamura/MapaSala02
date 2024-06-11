@@ -1,0 +1,6 @@
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala02-master\Model\bin\Debug\Model.dll
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala02-master\Model\bin\Debug\Model.pdb
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala02-master\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala02-master\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala02-master\Model\obj\Debug\Model.dll
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala02-master\Model\obj\Debug\Model.pdb

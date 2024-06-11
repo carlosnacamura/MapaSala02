@@ -25,7 +25,24 @@ namespace MapaSala.Formularios
         {
            
         }
-
+        private void LimparDados()
+        {
+            NumericUpDown[] num = new NumericUpDown[] { txtNumCadeira, txtNumPc };
+            TextBox[] txt = new TextBox[] { txtId, txtNome };
+            CheckBox[] chk = new CheckBox[] { chkDisponivel, chkIsLab };
+            foreach (NumericUpDown n in num)
+            {
+                n.Value = 0;
+            }
+            foreach(TextBox t in txt)
+            {
+                t.Text = "";
+            }
+            foreach(CheckBox c in chk)
+            {
+                c.Checked = false;
+            }
+        }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             SalasEntidade sala = new SalasEntidade();

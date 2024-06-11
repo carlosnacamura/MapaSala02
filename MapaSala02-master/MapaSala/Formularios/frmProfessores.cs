@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model.Entitidades;
-
 namespace MapaSala.Formularios
 {
     public partial class frmProfessores : Form
@@ -29,6 +28,28 @@ namespace MapaSala.Formularios
             p.Nome = txtNomeCompleto.Text;
 
             dados.Add(p);
+            LimparDados();
+        }
+        private void LimparDados()
+        {
+            TextBox[] txt = new TextBox[] { txtApelido, txtNomeCompleto };
+            foreach(TextBox t in txt){
+                t.Text = "";
+            }
+            numId.Value = 0;
+        }
+        private void frmProfessores_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparDados();
+        }
+
+        private void dtGridProfessores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
