@@ -13,7 +13,8 @@ namespace MapaSala.Formularios
 {
     public partial class frmDisciplina : Form
     {
-        BindingSource dados;
+        DataTable dados;
+        int LinhaSelecionada;
         public frmDisciplina()
         {
             InitializeComponent();
@@ -52,6 +53,7 @@ namespace MapaSala.Formularios
         private object[] Linha()
         {
             return new object[] { Id, Nome, Sigla };
+            dtGridDisciplina.Rows.
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
