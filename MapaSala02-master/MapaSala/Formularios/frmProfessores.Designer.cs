@@ -60,7 +60,7 @@ namespace MapaSala.Formularios
             // 
             // txtNomeCompleto
             // 
-            this.txtNomeCompleto.Location = new System.Drawing.Point(132, 25);
+            this.txtNomeCompleto.Location = new System.Drawing.Point(105, 25);
             this.txtNomeCompleto.Name = "txtNomeCompleto";
             this.txtNomeCompleto.Size = new System.Drawing.Size(217, 20);
             this.txtNomeCompleto.TabIndex = 2;
@@ -68,7 +68,7 @@ namespace MapaSala.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(132, 7);
+            this.label2.Location = new System.Drawing.Point(102, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace MapaSala.Formularios
             // 
             // txtApelido
             // 
-            this.txtApelido.Location = new System.Drawing.Point(376, 25);
+            this.txtApelido.Location = new System.Drawing.Point(328, 26);
             this.txtApelido.Name = "txtApelido";
             this.txtApelido.Size = new System.Drawing.Size(140, 20);
             this.txtApelido.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace MapaSala.Formularios
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(376, 7);
+            this.label3.Location = new System.Drawing.Point(325, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 5;
@@ -92,9 +92,9 @@ namespace MapaSala.Formularios
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(538, 22);
+            this.btnSalvar.Location = new System.Drawing.Point(474, 25);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(45, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -102,18 +102,18 @@ namespace MapaSala.Formularios
             // 
             // dtGridProfessores
             // 
+            this.dtGridProfessores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridProfessores.Location = new System.Drawing.Point(-14, 67);
+            this.dtGridProfessores.Location = new System.Drawing.Point(12, 69);
             this.dtGridProfessores.Name = "dtGridProfessores";
             this.dtGridProfessores.Size = new System.Drawing.Size(636, 351);
             this.dtGridProfessores.TabIndex = 7;
-            this.dtGridProfessores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridProfessores_CellContentClick);
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(603, 22);
+            this.btnLimpar.Location = new System.Drawing.Point(555, 25);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(52, 23);
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 8;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
@@ -136,7 +136,6 @@ namespace MapaSala.Formularios
             this.Name = "frmProfessores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProfessores";
-            this.Load += new System.EventHandler(this.frmProfessores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProfessores)).EndInit();
             this.ResumeLayout(false);
