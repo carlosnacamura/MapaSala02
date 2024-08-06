@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MapaSala.DAO;
 using Model.Entitidades;
-
 namespace MapaSala.Formularios
 {
     public partial class frmProfessores : Form
@@ -31,6 +24,8 @@ namespace MapaSala.Formularios
             dados.Add(p);
 
             LimparCampos();
+            ProfessorDAO dao = new ProfessorDAO();
+            dao.Inserir(p);
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -43,6 +38,11 @@ namespace MapaSala.Formularios
             txtApelido.Text = "";
             txtNomeCompleto.Text = "";
             numId.Value = 0;
+        }
+
+        private void frmProfessores_Load(object sender, EventArgs e)
+        {
+         
         }
     }
 }
