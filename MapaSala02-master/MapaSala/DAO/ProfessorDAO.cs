@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using Model.Entitidades;
+using System.Data;
 
 namespace MapaSala.DAO
 {
@@ -14,6 +15,7 @@ namespace MapaSala.DAO
         // "LS05MPF" servidor em rede; "Localhost" próprio PC
         private string LinhaConexao = "Server=LS05MPF;Database=AULA_DS;User Id=sa;Password=admsasql;";
         private SqlConnection Conexao;
+
         public ProfessorDAO()
         {
             Conexao = new SqlConnection(LinhaConexao);
@@ -32,7 +34,23 @@ namespace MapaSala.DAO
             Conexao.Close();
         }
 
-        
+        public DataTable ObterProfessor()
+        {
+            Conexao.Open();
+            DataTable dt = new DataTable();
+            string query = "SELECT * FROM Professores ORDER BY ID desc";
+            SqlCommand comando = new SqlCommand(query, Conexao);
+            SqlDataReader reader = comando.ExecuteReader();
+
+            dt.Load(reader);
+
+            reader.Close();
+            Conexao.Close();
+
+  
+            return dt;
+        }
+
 
     }
 }
