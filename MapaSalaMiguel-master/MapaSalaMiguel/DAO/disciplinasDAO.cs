@@ -7,6 +7,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using model.entidades;
 using System.Data;
+using System.Windows.Forms;
 
 namespace MapaSala.DAO
 {
@@ -41,6 +42,12 @@ namespace MapaSala.DAO
             comando.ExecuteNonQuery();
             Conexao.Close();
         }
+
+        internal static ListBox.ObjectCollection ListBox()
+        {
+            throw new NotImplementedException();
+        }
+
         public DataTable obterDisciplina()
         {
             DataTable dt = new DataTable();
