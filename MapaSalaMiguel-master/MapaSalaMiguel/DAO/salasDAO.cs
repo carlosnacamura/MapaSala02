@@ -59,7 +59,7 @@ namespace MapaSala.DAO
             SqlCommand comando = new SqlCommand(query, Conexao);
             comando.ExecuteReader();
             SqlDataReader leitura = comando.ExecuteReader();
-            foreach (var atributos in typeof(ProfessoresEntidade).GetProperties())
+            foreach (var atributos in typeof(CursoDisciplinaEntidade).GetProperties())
             {
                 dt.Columns.Add(atributos.Name);
             }

@@ -31,10 +31,12 @@ namespace MapaSalaMiguel.formularios
         {
             this.lsDisciplina = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbxCursos = new System.Windows.Forms.ComboBox();
+            this.cbxDisciplina = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.dtCursoDisciplina = new System.Windows.Forms.DataGridView();
+            this.cbxCursos = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtCursoDisciplina)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,17 +63,17 @@ namespace MapaSalaMiguel.formularios
             this.label1.TabIndex = 1;
             this.label1.Text = "Professores";
             // 
-            // cbxCursos
+            // cbxDisciplina
             // 
-            this.cbxCursos.FormattingEnabled = true;
-            this.cbxCursos.Items.AddRange(new object[] {
+            this.cbxDisciplina.FormattingEnabled = true;
+            this.cbxDisciplina.Items.AddRange(new object[] {
             "Desenvolvimento de Sistema Integral",
             "Administração Integral",
             "IF"});
-            this.cbxCursos.Location = new System.Drawing.Point(205, 75);
-            this.cbxCursos.Name = "cbxCursos";
-            this.cbxCursos.Size = new System.Drawing.Size(121, 21);
-            this.cbxCursos.TabIndex = 2;
+            this.cbxDisciplina.Location = new System.Drawing.Point(205, 75);
+            this.cbxDisciplina.Name = "cbxDisciplina";
+            this.cbxDisciplina.Size = new System.Drawing.Size(121, 21);
+            this.cbxDisciplina.TabIndex = 2;
             // 
             // label2
             // 
@@ -99,15 +101,34 @@ namespace MapaSalaMiguel.formularios
             this.dtCursoDisciplina.Size = new System.Drawing.Size(431, 426);
             this.dtCursoDisciplina.TabIndex = 5;
             // 
+            // cbxCursos
+            // 
+            this.cbxCursos.FormattingEnabled = true;
+            this.cbxCursos.Location = new System.Drawing.Point(205, 160);
+            this.cbxCursos.Name = "cbxCursos";
+            this.cbxCursos.Size = new System.Drawing.Size(121, 21);
+            this.cbxCursos.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(202, 144);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Cursos";
+            // 
             // FrmCursoDisciplina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbxCursos);
             this.Controls.Add(this.dtCursoDisciplina);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbxCursos);
+            this.Controls.Add(this.cbxDisciplina);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lsDisciplina);
             this.Name = "FrmCursoDisciplina";
@@ -123,9 +144,11 @@ namespace MapaSalaMiguel.formularios
 
         private System.Windows.Forms.ListBox lsDisciplina;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbxCursos;
+        private System.Windows.Forms.ComboBox cbxDisciplina;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.DataGridView dtCursoDisciplina;
+        private System.Windows.Forms.ComboBox cbxCursos;
+        private System.Windows.Forms.Label label3;
     }
 }

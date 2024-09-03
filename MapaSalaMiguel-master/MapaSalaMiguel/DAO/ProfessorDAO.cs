@@ -10,17 +10,17 @@ using System.Data;
 
 namespace MapaSala.DAO
 {
-    public class ProfessorDAO
+    public class CursoDisciplinaDAO
     {
         // "LS05MPF" servidor em rede; "Localhost" próprio PC
         private string LinhaConexao = "Server=LS05MPF;Database=AULA_DS;User Id=sa;Password=admsasql;";
         private SqlConnection Conexao;
-        public ProfessorDAO()
+        public CursoDisciplinaDAO()
         {
             Conexao = new SqlConnection(LinhaConexao);
         }
 
-        public void Inserir(ProfessoresEntidade professor)
+        public void Inserir(CursoDisciplinaEntidade professor)
         {
             Conexao.Open();
             string query = "Insert into Professores (Nome, Apelido) Values (@nome,@apelido)";
@@ -40,7 +40,7 @@ namespace MapaSala.DAO
             SqlCommand comando = new SqlCommand(query, Conexao);
             comando.ExecuteReader();
             SqlDataReader leitura = comando.ExecuteReader();
-            foreach (var atributos in typeof(ProfessoresEntidade).GetProperties())
+            foreach (var atributos in typeof(CursoDisciplinaEntidade).GetProperties())
             {
                 dt.Columns.Add(atributos.Name);
             }
@@ -48,7 +48,7 @@ namespace MapaSala.DAO
             {
                 while (leitura.Read())
                 {
-                    ProfessoresEntidade professores = new ProfessoresEntidade();
+                    CursoDisciplinaEntidade professores = new CursoDisciplinaEntidade();
                     professores.Id = Convert.ToInt32(leitura[0]);
                     professores.Nome = leitura[1].ToString();
                     professores.Apelido = leitura[2].ToString();

@@ -44,6 +44,7 @@
     <Compile Include="entidades\AlunoEntidade.cs" />
     <Compile Include="entidades\CursosEntidade.cs" />
     <Compile Include="entidades\DisciplinasEntidade.cs" />
+    <Compile Include="entidades\CursoDisciplinaEntidade.cs" />
     <Compile Include="entidades\NewFolder1\CursosEntidade.cs" />
     <Compile Include="entidades\ProfessoresEntidade.cs" />
     <Compile Include="entidades\SalasEntidades.cs" />

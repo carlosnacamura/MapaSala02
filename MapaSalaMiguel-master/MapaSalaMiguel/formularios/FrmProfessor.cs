@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MapaSala.DAO;
+using MapaSalaMiguel.DAO;
 
 namespace MapaSalaMiguel.formularios
 {
@@ -16,13 +16,13 @@ namespace MapaSalaMiguel.formularios
     {
         DataTable dados;
         int LinhaSelecionada;
-        ProfessorDAO dao = new ProfessorDAO();
+        CursoDisciplinaDAO dao = new CursoDisciplinaDAO();
         public FrmProfessor()
         {
             InitializeComponent();
             dados = new DataTable();
             dtGridProfessor.DataSource = dados;
-            foreach (var atributos in typeof(ProfessoresEntidade).GetProperties())
+            foreach (var atributos in typeof(CursoDisciplinaEntidade).GetProperties())
             {
                 dados.Columns.Add(atributos.Name);
             }
@@ -49,12 +49,12 @@ namespace MapaSalaMiguel.formularios
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            ProfessoresEntidade professor = new ProfessoresEntidade();
+            CursoDisciplinaEntidade professor = new CursoDisciplinaEntidade();
             professor.Id = Convert.ToInt32(txtboxId.Text);
             professor.Nome = txtboxNome.Text;
             professor.Apelido = txtboxApelido.Text; // apelido do professor
             dados.Rows.Add(professor.Linha());
-            ProfessorDAO dao = new ProfessorDAO();
+            CursoDisciplinaDAO dao = new ProfessorDAO();
             dao.Inserir(professor);
             dtGridProfessor.DataSource = dao.obterProfessor();
             limpar();

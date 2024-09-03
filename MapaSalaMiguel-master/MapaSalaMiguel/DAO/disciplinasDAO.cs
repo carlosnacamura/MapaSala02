@@ -13,7 +13,6 @@ namespace MapaSala.DAO
 {
     public class disciplinasDAO
     {
-        // "LS05MPF" servidor em rede; "Localhost" próprio PC
         private string LinhaConexao = "Server=LS05MPF;Database=AULA_DS;User Id=sa;Password=admsasql;";
         private SqlConnection Conexao;
         public disciplinasDAO()
@@ -41,6 +40,28 @@ namespace MapaSala.DAO
         public bool ativo { get; set; }*/
             comando.ExecuteNonQuery();
             Conexao.Close();
+        }
+        public DataTable PreencherComboBox()
+        {
+            DataTable dataTable = new DataTable();
+
+            string query = "SELECT Id, Nome FROM Disciplinas";
+
+            using (SqlConnection connection = new SqlConnection(LinhaConexao))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+
+                try
+                {
+                    adapter.Fill(dataTable);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro ao acessar os dados: " + ex.Message);
+                }
+            }
+
+            return dataTable;
         }
 
         internal static ListBox.ObjectCollection ListBox()
