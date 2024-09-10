@@ -50,12 +50,10 @@ namespace MapaSala.DAO
 
                 try
                 {
-                    // Preenche o DataTable com os dados da consulta
                     adapter.Fill(dataTable);
                 }
                 catch (Exception ex)
                 {
-                    // Lida com erros, se necessário
                     throw new Exception("Erro ao acessar os dados: " + ex.Message);
                 }
             }

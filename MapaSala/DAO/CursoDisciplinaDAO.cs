@@ -40,9 +40,9 @@ namespace MapaSala.DAO
             DataTable dt = new DataTable();
             Conexao.Open();
             string query = @"SELECT C.Nome AS NomeCurso, D.Nome AS NomeDisciplina, CD.Periodo  FROM CURSO_DISCIPLINA CD 
-                                INNER JOIN CURSOS C ON(C.Id = CD.Curso_Id)
-                                INNER JOIN DISCIPLINAS D ON(D.Id = CD.Disciplina_Id)
-                                ORDER BY CD.Id DESC";
+                               INNER JOIN CURSOS C ON(C.Id = CD.Curso_Id)
+                               INNER JOIN DISCIPLINAS D ON(D.Id = CD.Disciplina_Id)
+                               ORDER BY CD.Id DESC";
             SqlCommand comando = new SqlCommand(query, Conexao);
             SqlDataReader Leitura = comando.ExecuteReader();
           
@@ -64,14 +64,11 @@ namespace MapaSala.DAO
             Conexao.Close();
             return dt;
         }
-
-
-        /*
         public DataTable PreencherComboBox()
         {
             DataTable dataTable = new DataTable();
 
-            string query = "SELECT Id, Nome FROM Cursos";
+            string query = "SELECT Id,DisciplinaId,CursoId FROM ";
 
             using (SqlConnection connection = new SqlConnection(LinhaConexao))
             {
@@ -79,47 +76,15 @@ namespace MapaSala.DAO
 
                 try
                 {
-                    // Preenche o DataTable com os dados da consulta
                     adapter.Fill(dataTable);
                 }
                 catch (Exception ex)
                 {
-                    // Lida com erros, se necessário
                     throw new Exception("Erro ao acessar os dados: " + ex.Message);
                 }
             }
 
             return dataTable;
         }
-
-        public DataTable ObterDisciplinas()
-        {
-            DataTable dt = new DataTable();
-            Conexao.Open();
-            string query = "SELECT Nome , Turno, Sigla, Ativo FROM Cursos Order by Id desc";
-            SqlCommand comando = new SqlCommand(query, Conexao);
-
-            SqlDataReader Leitura = comando.ExecuteReader();
-
-            foreach (var atributos in typeof(DisciplinaEntidade).GetProperties())
-            {
-                dt.Columns.Add(atributos.Name);
-            }
-
-            if (Leitura.HasRows)
-            {
-                while (Leitura.Read())
-                {
-                    ProfessoresEntidade p = new ProfessoresEntidade();
-                    p.Id = Convert.ToInt32(Leitura[0]);
-                    p.Nome = Leitura[1].ToString();
-                    p.Apelido = Leitura[2].ToString();
-                    dt.Rows.Add(p.Linha());
-                }
-            }
-            Conexao.Close();
-            return dt;
-        }
-        */
     }
 }
