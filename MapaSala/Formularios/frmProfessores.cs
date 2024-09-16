@@ -63,5 +63,10 @@ namespace MapaSala.Formularios
         {
             dtGridProfessores.DataSource = dao.Pesquisar(txtPesquisa.Text);
         }
+
+        private void frmProfessores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Model.Entitidades;
 
 namespace MapaSala.DAO
@@ -64,6 +65,12 @@ namespace MapaSala.DAO
             Conexao.Close();
             return dt;
         }
+
+        internal object Pesquisar(TextBox txtPesquisar)
+        {
+            throw new NotImplementedException();
+        }
+
         public DataTable PreencherComboBox()
         {
             DataTable dataTable = new DataTable();

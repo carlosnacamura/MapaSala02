@@ -46,9 +46,9 @@ namespace MapaSala.Formularios
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(377, 27);
+            this.btnSalvar.Location = new System.Drawing.Point(14, 247);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(59, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(122, 65);
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -56,14 +56,14 @@ namespace MapaSala.Formularios
             // 
             // txtNomeDisciplina
             // 
-            this.txtNomeDisciplina.Location = new System.Drawing.Point(118, 29);
+            this.txtNomeDisciplina.Location = new System.Drawing.Point(11, 65);
             this.txtNomeDisciplina.Name = "txtNomeDisciplina";
             this.txtNomeDisciplina.Size = new System.Drawing.Size(147, 20);
             this.txtNomeDisciplina.TabIndex = 1;
             // 
             // txtSigla
             // 
-            this.txtSigla.Location = new System.Drawing.Point(271, 30);
+            this.txtSigla.Location = new System.Drawing.Point(11, 118);
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(100, 20);
             this.txtSigla.TabIndex = 2;
@@ -71,7 +71,7 @@ namespace MapaSala.Formularios
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(268, 14);
+            this.label1.Location = new System.Drawing.Point(8, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 3;
@@ -80,7 +80,7 @@ namespace MapaSala.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(115, 13);
+            this.label2.Location = new System.Drawing.Point(8, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 4;
@@ -89,7 +89,7 @@ namespace MapaSala.Formularios
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 13);
+            this.label3.Location = new System.Drawing.Point(11, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 13);
             this.label3.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace MapaSala.Formularios
             // 
             // numId
             // 
-            this.numId.Location = new System.Drawing.Point(13, 30);
+            this.numId.Location = new System.Drawing.Point(11, 178);
             this.numId.Name = "numId";
             this.numId.Size = new System.Drawing.Size(99, 20);
             this.numId.TabIndex = 6;
@@ -108,18 +108,18 @@ namespace MapaSala.Formularios
             this.dtGridDisciplina.AllowUserToDeleteRows = false;
             this.dtGridDisciplina.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridDisciplina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridDisciplina.Location = new System.Drawing.Point(12, 65);
+            this.dtGridDisciplina.Location = new System.Drawing.Point(351, 12);
             this.dtGridDisciplina.Name = "dtGridDisciplina";
             this.dtGridDisciplina.ReadOnly = true;
-            this.dtGridDisciplina.Size = new System.Drawing.Size(616, 359);
+            this.dtGridDisciplina.Size = new System.Drawing.Size(313, 426);
             this.dtGridDisciplina.TabIndex = 7;
             this.dtGridDisciplina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplina_CellClick);
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(442, 26);
+            this.btnLimpar.Location = new System.Drawing.Point(204, 247);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(59, 23);
+            this.btnLimpar.Size = new System.Drawing.Size(122, 65);
             this.btnLimpar.TabIndex = 8;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
@@ -127,9 +127,9 @@ namespace MapaSala.Formularios
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(508, 26);
+            this.btnExcluir.Location = new System.Drawing.Point(14, 348);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(54, 23);
+            this.btnExcluir.Size = new System.Drawing.Size(122, 71);
             this.btnExcluir.TabIndex = 9;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -137,9 +137,9 @@ namespace MapaSala.Formularios
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(568, 28);
+            this.btnEditar.Location = new System.Drawing.Point(204, 348);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(60, 23);
+            this.btnEditar.Size = new System.Drawing.Size(122, 71);
             this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -164,6 +164,7 @@ namespace MapaSala.Formularios
             this.Name = "frmDisciplina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDisciplina";
+            this.Load += new System.EventHandler(this.frmDisciplina_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplina)).EndInit();
             this.ResumeLayout(false);

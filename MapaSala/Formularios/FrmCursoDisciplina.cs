@@ -11,6 +11,7 @@ namespace MapaSala.Formularios
         DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
         CursoDAO cursoDAO = new CursoDAO();
         CursoDisciplinaDAO dao = new CursoDisciplinaDAO();
+        int LinhaSelecionada;
         private void AtualizaGrid(DataTable dados)
         {
             dtCursoDisciplina.DataSource = dados;
@@ -51,6 +52,24 @@ namespace MapaSala.Formularios
         private void FrmCursoDisciplina_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtCursoDisciplina_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionada = e.RowIndex;
+            cbDisciplinas.SelectedValue = dtCursoDisciplina.Rows[LinhaSelecionada].Cells[1].Value.ToString();
+            cbPeriodos.SelectedValue = dtCursoDisciplina.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            cbxCursos.SelectedValue = Convert.ToInt32(dtCursoDisciplina.Rows[LinhaSelecionada].Cells[0].Value);
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            dtCursoDisciplina.Rows.RemoveAt(LinhaSelecionada);
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            dtCursoDisciplina.DataSource = dao.Pesquisar(txtPesquisar);
         }
     }
 }

@@ -37,13 +37,16 @@ namespace MapaSala.Formularios
             this.cbDisciplinas = new System.Windows.Forms.ComboBox();
             this.cbPeriodos = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtCursoDisciplina)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 17);
+            this.label1.Location = new System.Drawing.Point(6, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 1;
@@ -52,7 +55,7 @@ namespace MapaSala.Formularios
             // cbxCursos
             // 
             this.cbxCursos.FormattingEnabled = true;
-            this.cbxCursos.Location = new System.Drawing.Point(229, 33);
+            this.cbxCursos.Location = new System.Drawing.Point(9, 125);
             this.cbxCursos.Name = "cbxCursos";
             this.cbxCursos.Size = new System.Drawing.Size(121, 21);
             this.cbxCursos.TabIndex = 2;
@@ -60,7 +63,7 @@ namespace MapaSala.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(226, 17);
+            this.label2.Location = new System.Drawing.Point(6, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 3;
@@ -68,9 +71,9 @@ namespace MapaSala.Formularios
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(143, 31);
+            this.btnAdicionar.Location = new System.Drawing.Point(9, 335);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.btnAdicionar.Size = new System.Drawing.Size(90, 35);
             this.btnAdicionar.TabIndex = 4;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
@@ -80,15 +83,16 @@ namespace MapaSala.Formularios
             // 
             this.dtCursoDisciplina.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtCursoDisciplina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtCursoDisciplina.Location = new System.Drawing.Point(12, 73);
+            this.dtCursoDisciplina.Location = new System.Drawing.Point(252, 12);
             this.dtCursoDisciplina.Name = "dtCursoDisciplina";
-            this.dtCursoDisciplina.Size = new System.Drawing.Size(841, 378);
+            this.dtCursoDisciplina.Size = new System.Drawing.Size(601, 439);
             this.dtCursoDisciplina.TabIndex = 5;
+            this.dtCursoDisciplina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtCursoDisciplina_CellClick);
             // 
             // cbDisciplinas
             // 
             this.cbDisciplinas.FormattingEnabled = true;
-            this.cbDisciplinas.Location = new System.Drawing.Point(16, 31);
+            this.cbDisciplinas.Location = new System.Drawing.Point(9, 71);
             this.cbDisciplinas.Name = "cbDisciplinas";
             this.cbDisciplinas.Size = new System.Drawing.Size(121, 21);
             this.cbDisciplinas.TabIndex = 6;
@@ -103,7 +107,7 @@ namespace MapaSala.Formularios
             "1º Módulo",
             "2º Módulo",
             "3º Módulo"});
-            this.cbPeriodos.Location = new System.Drawing.Point(359, 33);
+            this.cbPeriodos.Location = new System.Drawing.Point(9, 177);
             this.cbPeriodos.Name = "cbPeriodos";
             this.cbPeriodos.Size = new System.Drawing.Size(121, 21);
             this.cbPeriodos.TabIndex = 7;
@@ -111,17 +115,47 @@ namespace MapaSala.Formularios
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(356, 17);
+            this.label3.Location = new System.Drawing.Point(6, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Periodo";
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(12, 403);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(87, 37);
+            this.btnExcluir.TabIndex = 9;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Location = new System.Drawing.Point(9, 248);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(121, 20);
+            this.txtPesquisar.TabIndex = 10;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 232);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Pesquisar";
             // 
             // FrmCursoDisciplina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 463);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtPesquisar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbPeriodos);
             this.Controls.Add(this.cbDisciplinas);
@@ -149,5 +183,8 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.ComboBox cbDisciplinas;
         private System.Windows.Forms.ComboBox cbPeriodos;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.Label label4;
     }
 }
