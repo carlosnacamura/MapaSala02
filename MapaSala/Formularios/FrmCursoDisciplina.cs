@@ -69,7 +69,7 @@ namespace MapaSala.Formularios
 
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
         {
-            dtCursoDisciplina.DataSource = dao.Pesquisar(txtPesquisar);
+            dtCursoDisciplina.DataSource = dao.Pesquisar(txtPesquisar.Text);
         }
     }
 }

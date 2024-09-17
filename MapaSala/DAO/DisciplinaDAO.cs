@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Model.Entitidades;
 
 namespace MapaSala.DAO
@@ -48,12 +49,10 @@ namespace MapaSala.DAO
 
                 try
                 {
-                    // Preenche o DataTable com os dados da consulta
                     adapter.Fill(dataTable);
                 }
                 catch (Exception ex)
                 {
-                    // Lida com erros, se necessário
                     throw new Exception("Erro ao acessar os dados: " + ex.Message);
                 }
             }
@@ -81,15 +80,56 @@ namespace MapaSala.DAO
             {
                 while (Leitura.Read())
                 {
-                    ProfessoresEntidade p = new ProfessoresEntidade();
+                    DisciplinaEntidade p = new DisciplinaEntidade();
                     p.Id = Convert.ToInt32(Leitura[0]);
                     p.Nome = Leitura[1].ToString();
-                    p.Apelido = Leitura[2].ToString();
+                    p.Sigla = Leitura[2].ToString();
                     dt.Rows.Add(p.Linha());
                 }
             }
             Conexao.Close();
             return dt;
+        }
+
+        public DataTable Pesquisar(string pesquisa)
+        {
+            DataTable dt = new DataTable();
+            Conexao.Open();
+            string query = "";
+            if (string.IsNullOrEmpty(pesquisa))
+            {
+                query = "SELECT Id, Nome, Sigla FROM Disciplina Order by Id desc";
+            }
+            else
+            {
+                query = "SELECT Id, Nome, Sigla FROM Disciplina Where Nome like '%" + pesquisa + "%' Order by Id desc";
+            }
+
+
+
+            SqlCommand comando = new SqlCommand(query, Conexao);
+
+            SqlDataReader Leitura = comando.ExecuteReader();
+
+            foreach (var atributos in typeof(DisciplinaEntidade).GetProperties())
+            {
+                dt.Columns.Add(atributos.Name);
+            }
+
+            if (Leitura.HasRows)
+            {
+                while (Leitura.Read())
+                {
+                    DisciplinaEntidade p = new DisciplinaEntidade();
+                    p.Id = Convert.ToInt32(Leitura[0]);
+                    p.Nome = Leitura[1].ToString();
+                    p.Sigla = Leitura[2].ToString();
+                    dt.Rows.Add(p.Linha());
+                }
+            }
+            Conexao.Close();
+            return dt;
+
         }
     }
 }

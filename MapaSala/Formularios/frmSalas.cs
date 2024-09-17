@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MapaSala.DAO;
 using Model.Entitidades;
 
 namespace MapaSala.Formularios
 {
     public partial class frmSalas : Form
     {
+        SalasDAO dao = new SalasDAO();
         BindingSource dados;
         public frmSalas()
         {
@@ -37,6 +39,11 @@ namespace MapaSala.Formularios
             sala.Disponivel = chkDisponivel.Checked;
 
             dados.Add(sala);
+        }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            dtGridSalas.DataSource = dao.Pesquisar(txtPesquisa.Text);
         }
     }
 }

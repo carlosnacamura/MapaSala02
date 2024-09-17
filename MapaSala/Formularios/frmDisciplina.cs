@@ -16,7 +16,9 @@ namespace MapaSala.Formularios
     public partial class frmDisciplina : Form
     {
         DataTable dados;
+        
         int LinhaSelecionada;
+        DisciplinaDAO dao = new DisciplinaDAO();
         
 
         public frmDisciplina()
@@ -87,6 +89,11 @@ namespace MapaSala.Formularios
         private void frmDisciplina_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            dtGridDisciplina.DataSource = dao.Pesquisar(txtPesquisar.Text);
         }
     }
 }

@@ -85,6 +85,45 @@ namespace MapaSala.DAO
                 {
                     ProfessoresEntidade p = new ProfessoresEntidade();
                     p.Id = Convert.ToInt32(Leitura[0]);
+                    p.Turno = Leitura[1].ToString();
+                    p.Apelido = Leitura[2].ToString();
+                    dt.Rows.Add(p.Linha());
+                }
+            }
+            Conexao.Close();
+            return dt;
+        }
+        public DataTable Pesquisar(string pesquisa)
+        {
+            DataTable dt = new DataTable();
+            Conexao.Open();
+            string query = "";
+            if (string.IsNullOrEmpty(pesquisa))
+            {
+                query = "SELECT Id, Nome, Apelido FROM Salas Order by Id desc";
+            }
+            else
+            {
+                query = "SELECT Id, Nome, Apelido FROM Salas Where Nome like '%" + pesquisa + "%' Order by Id desc";
+            }
+
+
+
+            SqlCommand comando = new SqlCommand(query, Conexao);
+
+            SqlDataReader Leitura = comando.ExecuteReader();
+
+            foreach (var atributos in typeof(SalasEntidade).GetProperties())
+            {
+                dt.Columns.Add(atributos.Name);
+            }
+
+            if (Leitura.HasRows)
+            {
+                while (Leitura.Read())
+                {
+                    SalasEntidade p = new SalasEntidade();
+                    p.Id = Convert.ToInt32(Leitura[0]);
                     p.Nome = Leitura[1].ToString();
                     p.Apelido = Leitura[2].ToString();
                     dt.Rows.Add(p.Linha());
@@ -92,6 +131,7 @@ namespace MapaSala.DAO
             }
             Conexao.Close();
             return dt;
+
         }
     }
 }

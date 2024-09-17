@@ -156,7 +156,7 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.numId);
             this.Name = "frmProfessores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmProfessores";
+            this.Text = "Formulário Professores";
             this.Load += new System.EventHandler(this.frmProfessores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProfessores)).EndInit();

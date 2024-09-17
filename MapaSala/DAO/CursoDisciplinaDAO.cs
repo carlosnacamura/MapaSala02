@@ -66,16 +66,51 @@ namespace MapaSala.DAO
             return dt;
         }
 
-        internal object Pesquisar(TextBox txtPesquisar)
+        public DataTable Pesquisar(string pesquisa)
         {
-            throw new NotImplementedException();
-        }
+            DataTable dt = new DataTable();
+            Conexao.Open();
+            string query = "";
+            if (string.IsNullOrEmpty(pesquisa))
+            {
+                query = "SELECT Id, NomeCurso, NomeDisciplinas FROM CursoDisciplina Order by Id desc";
+            }
+            else
+            {
+                query = "SELECT Id, NomeCurso, NomeDisciplinas FROM CursoDisciplina Where Nome like '%" + pesquisa + "%' Order by Id desc";
+            }
 
+
+
+            SqlCommand comando = new SqlCommand(query, Conexao);
+
+            SqlDataReader Leitura = comando.ExecuteReader();
+
+            foreach (var atributos in typeof(CursoDisciplinaEntidade).GetProperties())
+            {
+                dt.Columns.Add(atributos.Name);
+            }
+
+            if (Leitura.HasRows)
+            {
+                while (Leitura.Read())
+                {
+                    CursoDisciplinaEntidade p = new CursoDisciplinaEntidade();
+                    p.Id = Convert.ToInt32(Leitura[0]);
+                    p.NomeCurso = Leitura[1].ToString();
+                    p.NomeDisciplina = Leitura[2].ToString();
+                    dt.Rows.Add(p.Linha());
+                }
+            }
+            Conexao.Close();
+            return dt;
+
+        }
         public DataTable PreencherComboBox()
         {
             DataTable dataTable = new DataTable();
 
-            string query = "SELECT Id,DisciplinaId,CursoId FROM ";
+            string query = "SELECT Id,DisciplinaId,CursoId FROM CursoDisciplina";
 
             using (SqlConnection connection = new SqlConnection(LinhaConexao))
             {
