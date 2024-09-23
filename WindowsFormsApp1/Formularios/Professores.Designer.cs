@@ -30,31 +30,26 @@ namespace Formulario
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Professores));
-            this.label1 = new System.Windows.Forms.Label();
-            this.NomeEbx = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.Table = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ApelidoTbxx = new System.Windows.Forms.TextBox();
+            this.txtApelido = new System.Windows.Forms.TextBox();
             this.DeleteRowBtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
             this.SearchTbx = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // txtNome
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // NomeEbx
-            // 
-            resources.ApplyResources(this.NomeEbx, "NomeEbx");
-            this.NomeEbx.Name = "NomeEbx";
-            this.NomeEbx.Enter += new System.EventHandler(this.NomeEbx_Enter);
-            this.NomeEbx.Leave += new System.EventHandler(this.NomeEb_Leave);
+            resources.ApplyResources(this.txtNome, "txtNome");
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Enter += new System.EventHandler(this.NomeEbx_Enter);
+            this.txtNome.Leave += new System.EventHandler(this.NomeEb_Leave);
             // 
             // ClearBtn
             // 
@@ -77,20 +72,12 @@ namespace Formulario
             this.Table.Name = "Table";
             this.Table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridProfessores_CellClick);
             // 
-            // panel1
+            // txtApelido
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Controls.Add(this.label1);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Name = "panel1";
-            // 
-            // ApelidoTbxx
-            // 
-            resources.ApplyResources(this.ApelidoTbxx, "ApelidoTbxx");
-            this.ApelidoTbxx.Name = "ApelidoTbxx";
-            this.ApelidoTbxx.Enter += new System.EventHandler(this.ApelidoTbxx_Enter);
-            this.ApelidoTbxx.Leave += new System.EventHandler(this.ApelidoTbxx_Leave);
+            resources.ApplyResources(this.txtApelido, "txtApelido");
+            this.txtApelido.Name = "txtApelido";
+            this.txtApelido.Enter += new System.EventHandler(this.ApelidoTbxx_Enter);
+            this.txtApelido.Leave += new System.EventHandler(this.ApelidoTbxx_Leave);
             // 
             // DeleteRowBtn
             // 
@@ -112,41 +99,57 @@ namespace Formulario
             this.SearchTbx.Name = "SearchTbx";
             this.SearchTbx.TextChanged += new System.EventHandler(this.SearchTbx_TextChanged);
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
             // Professores
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchTbx);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.DeleteRowBtn);
-            this.Controls.Add(this.ApelidoTbxx);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtApelido);
             this.Controls.Add(this.Table);
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.ClearBtn);
-            this.Controls.Add(this.NomeEbx);
+            this.Controls.Add(this.txtNome);
             this.Name = "Professores";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Professores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox NomeEbx;
+        private System.Windows.Forms.TextBox txtNome;
         
         private System.Windows.Forms.Button ClearBtn;
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.DataGridView Table;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox ApelidoTbxx;
+        private System.Windows.Forms.TextBox txtApelido;
         private System.Windows.Forms.Button DeleteRowBtn;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.TextBox SearchTbx;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -34,15 +34,15 @@ namespace Formulario
         }
         private void SetPlaceholders()
         {
-            NomePlaceholder = NomeTbx.Text;
-            SiglaPlaceholder = SiglaTbx.Text;
+            NomePlaceholder = txtNome.Text;
+            SiglaPlaceholder = txtSigla.Text;
         }
 
         private void ClearFields()
         {
-            NomeTbx.Text = "Nome";
-            SiglaTbx.Text = "Sigla";
-            IdNud.Value = 0;
+            txtNome.Text = "Nome";
+            txtSigla.Text = "Sigla";
+            numId.Value = 0;
         }
 
         private void Placeholder(TextBox textBox, String placeholder_value)
@@ -65,23 +65,20 @@ namespace Formulario
             get{
             DisciplinaEntidade disciplina;
             disciplina = new DisciplinaEntidade();
-            disciplina.Id= Convert.ToInt32(IdNud.Value);
-            disciplina.Nome= NomeTbx.Text;
-            disciplina.Sigla= SiglaTbx.Text;
+            disciplina.Id= Convert.ToInt32(numId.Value);
+            disciplina.Nome= txtNome.Text;
+            disciplina.Sigla= txtSigla.Text;
             return disciplina;
             }
         }
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            DisciplinaEntidade disciplina = Cadastro;
-            if (!disciplina.IsFull()) { return; }
-            conn.InsertAndUpdateDataTable(disciplina, ref Table);
-            ClearFields();
+
         }
         private void SetFieldsValues(DisciplinaEntidade disciplina){
-            NomeTbx.Text=disciplina.Nome;
-            SiglaTbx.Text=disciplina.Sigla;
-            IdNud.Value=disciplina.Id;
+            txtNome.Text=disciplina.Nome;
+            txtSigla.Text=disciplina.Sigla;
+            numId.Value=disciplina.Id;
         }
         private DisciplinaEntidade MakeObjectDisciplinasEntidade(DataGridViewRow Rows){
             DataGridViewCellCollection Cells= Rows.Cells;
@@ -123,6 +120,16 @@ namespace Formulario
         private void SearchTbx_TextChanged(object sender, EventArgs e)
         {
             conn.SearchAndUpdateDataTable(SearchTbx.Text, ref Table);
+
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
 

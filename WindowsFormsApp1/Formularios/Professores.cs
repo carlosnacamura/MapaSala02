@@ -38,20 +38,20 @@ namespace Formulario
         }
         private void ClearFields()
         {
-            NomeEbx.Text = NomePlaceholder;
-            NomeEbx.ForeColor = Color.Gray;
-            ApelidoTbxx.Text = ApelidoPlaceholder;
-            ApelidoTbxx.ForeColor = Color.Gray;
+            txtNome.Text = NomePlaceholder;
+            txtNome.ForeColor = Color.Gray;
+            txtApelido.Text = ApelidoPlaceholder;
+            txtApelido.ForeColor = Color.Gray;
         }
         private bool DataIsCorrectly()
         {
-            if (NomeEbx.Text == NomePlaceholder || NomeEbx.Text == "")
+            if (txtNome.Text == NomePlaceholder || txtNome.Text == "")
             {
                 MessageBox.Show("Preencha o campo corretamente");
                 return false;
             }
 
-            if (ApelidoTbxx.Text == ApelidoPlaceholder || ApelidoTbxx.Text == "") {
+            if (txtApelido.Text == ApelidoPlaceholder || txtApelido.Text == "") {
                 MessageBox.Show("Preencha o campo apelido corretamente");
                 return false;
             }
@@ -60,14 +60,14 @@ namespace Formulario
         private ProfessoresEntidade Cadastro{
             get{
             ProfessoresEntidade professor = new ProfessoresEntidade();
-            professor.Nome = NomeEbx.Text;
-            professor.Apelido = ApelidoTbxx.Text;
+            professor.Nome = txtNome.Text;
+            professor.Apelido = txtApelido.Text;
             return professor;
             }
             set
             {
-                NomeEbx.Text = value.Nome;
-                ApelidoTbxx.Text = value.Apelido;
+                txtNome.Text = value.Nome;
+                txtApelido.Text = value.Apelido;
             }
         }
         private void RegisterBtn_Click(object sender, EventArgs e)
@@ -84,12 +84,12 @@ namespace Formulario
         }
         private void SetFields(ProfessoresEntidade professor)
         {
-            NomeEbx.Text = professor.Nome;
-            ApelidoTbxx.Text = professor.Apelido;
+            txtNome.Text = professor.Nome;
+            txtApelido.Text = professor.Apelido;
         }
         private void NomeEbx_Enter(object sender, EventArgs e)
         {
-            Placeholder(NomeEbx, NomePlaceholder);
+            Placeholder(txtNome, NomePlaceholder);
         }
 
         private void ApelidoTbx(object sender, EventArgs e)
@@ -105,18 +105,18 @@ namespace Formulario
 
         private void NomeEb_Leave(object sender, EventArgs e)
         {
-            Placeholder(NomeEbx, NomePlaceholder);
+            Placeholder(txtNome, NomePlaceholder);
 
         }
 
         private void ApelidoTbxx_Leave(object sender, EventArgs e)
         {
-            Placeholder(ApelidoTbxx, ApelidoPlaceholder);
+            Placeholder(txtApelido, ApelidoPlaceholder);
         }
 
         private void ApelidoTbxx_Enter(object sender, EventArgs e)
         {
-            Placeholder(ApelidoTbxx, ApelidoPlaceholder);
+            Placeholder(txtApelido, ApelidoPlaceholder);
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)
@@ -155,6 +155,11 @@ namespace Formulario
         private void SearchTbx_TextChanged(object sender, EventArgs e)
         {
             conn.SearchAndUpdateDataTable(SearchTbx.Text, ref Table);
+
+        }
+
+        private void Professores_Load(object sender, EventArgs e)
+        {
 
         }
     }

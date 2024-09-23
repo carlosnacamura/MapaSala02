@@ -35,22 +35,19 @@ namespace Formulario
             this.adsada = new System.Windows.Forms.TextBox();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.IsLabChk = new System.Windows.Forms.CheckBox();
-            this.RegisterRoomHeaderLabel = new System.Windows.Forms.Label();
             this.ClearBtn = new System.Windows.Forms.Button();
-            this.RegisterRoomHeaderPanel = new System.Windows.Forms.Panel();
             this.WarningLabel = new System.Windows.Forms.Label();
             this.EditBtn = new System.Windows.Forms.Button();
             this.DeleteRowBtn = new System.Windows.Forms.Button();
             this.Table = new System.Windows.Forms.DataGridView();
             this.SearchTbx = new System.Windows.Forms.TextBox();
             this.DisponivelChk = new System.Windows.Forms.CheckBox();
-            this.RegisterRoomHeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
             this.SuspendLayout();
             // 
             // NameEntry
             // 
-            this.NameEntry.Location = new System.Drawing.Point(60, 178);
+            this.NameEntry.Location = new System.Drawing.Point(25, 71);
             this.NameEntry.Name = "NameEntry";
             this.NameEntry.Size = new System.Drawing.Size(218, 20);
             this.NameEntry.TabIndex = 0;
@@ -60,7 +57,7 @@ namespace Formulario
             // 
             // PCsNumberEntry
             // 
-            this.PCsNumberEntry.Location = new System.Drawing.Point(60, 204);
+            this.PCsNumberEntry.Location = new System.Drawing.Point(25, 97);
             this.PCsNumberEntry.Name = "PCsNumberEntry";
             this.PCsNumberEntry.Size = new System.Drawing.Size(218, 20);
             this.PCsNumberEntry.TabIndex = 1;
@@ -70,7 +67,7 @@ namespace Formulario
             // 
             // ChairEntry
             // 
-            this.ChairEntry.Location = new System.Drawing.Point(60, 230);
+            this.ChairEntry.Location = new System.Drawing.Point(25, 123);
             this.ChairEntry.Name = "ChairEntry";
             this.ChairEntry.Size = new System.Drawing.Size(218, 20);
             this.ChairEntry.TabIndex = 2;
@@ -80,7 +77,7 @@ namespace Formulario
             // 
             // adsada
             // 
-            this.adsada.Location = new System.Drawing.Point(60, 256);
+            this.adsada.Location = new System.Drawing.Point(25, 149);
             this.adsada.Name = "adsada";
             this.adsada.Size = new System.Drawing.Size(218, 20);
             this.adsada.TabIndex = 3;
@@ -101,23 +98,12 @@ namespace Formulario
             // IsLabChk
             // 
             this.IsLabChk.AutoSize = true;
-            this.IsLabChk.Location = new System.Drawing.Point(60, 282);
+            this.IsLabChk.Location = new System.Drawing.Point(25, 194);
             this.IsLabChk.Name = "IsLabChk";
             this.IsLabChk.Size = new System.Drawing.Size(79, 17);
             this.IsLabChk.TabIndex = 5;
             this.IsLabChk.Text = "Laboratório";
             this.IsLabChk.UseVisualStyleBackColor = true;
-            // 
-            // RegisterRoomHeaderLabel
-            // 
-            this.RegisterRoomHeaderLabel.AutoSize = true;
-            this.RegisterRoomHeaderLabel.Font = new System.Drawing.Font("Microsoft YaHei", 24F);
-            this.RegisterRoomHeaderLabel.ForeColor = System.Drawing.Color.White;
-            this.RegisterRoomHeaderLabel.Location = new System.Drawing.Point(275, 9);
-            this.RegisterRoomHeaderLabel.Name = "RegisterRoomHeaderLabel";
-            this.RegisterRoomHeaderLabel.Size = new System.Drawing.Size(288, 41);
-            this.RegisterRoomHeaderLabel.TabIndex = 6;
-            this.RegisterRoomHeaderLabel.Text = "Cadastro de Salas";
             // 
             // ClearBtn
             // 
@@ -129,22 +115,12 @@ namespace Formulario
             this.ClearBtn.UseVisualStyleBackColor = true;
             this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
-            // RegisterRoomHeaderPanel
-            // 
-            this.RegisterRoomHeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.RegisterRoomHeaderPanel.Controls.Add(this.RegisterRoomHeaderLabel);
-            this.RegisterRoomHeaderPanel.Location = new System.Drawing.Point(0, 0);
-            this.RegisterRoomHeaderPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.RegisterRoomHeaderPanel.Name = "RegisterRoomHeaderPanel";
-            this.RegisterRoomHeaderPanel.Size = new System.Drawing.Size(995, 73);
-            this.RegisterRoomHeaderPanel.TabIndex = 8;
-            // 
             // WarningLabel
             // 
             this.WarningLabel.AutoSize = true;
             this.WarningLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WarningLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.WarningLabel.Location = new System.Drawing.Point(59, 128);
+            this.WarningLabel.Location = new System.Drawing.Point(24, 21);
             this.WarningLabel.Name = "WarningLabel";
             this.WarningLabel.Size = new System.Drawing.Size(0, 21);
             this.WarningLabel.TabIndex = 9;
@@ -189,7 +165,7 @@ namespace Formulario
             // DisponivelChk
             // 
             this.DisponivelChk.AutoSize = true;
-            this.DisponivelChk.Location = new System.Drawing.Point(60, 305);
+            this.DisponivelChk.Location = new System.Drawing.Point(25, 217);
             this.DisponivelChk.Name = "DisponivelChk";
             this.DisponivelChk.Size = new System.Drawing.Size(75, 17);
             this.DisponivelChk.TabIndex = 17;
@@ -208,7 +184,6 @@ namespace Formulario
             this.Controls.Add(this.DeleteRowBtn);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.WarningLabel);
-            this.Controls.Add(this.RegisterRoomHeaderPanel);
             this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.IsLabChk);
             this.Controls.Add(this.RegisterBtn);
@@ -218,8 +193,6 @@ namespace Formulario
             this.Controls.Add(this.NameEntry);
             this.Name = "Salas";
             this.Text = "salas";
-            this.RegisterRoomHeaderPanel.ResumeLayout(false);
-            this.RegisterRoomHeaderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -234,9 +207,7 @@ namespace Formulario
         private System.Windows.Forms.TextBox adsada;
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.CheckBox IsLabChk;
-        private System.Windows.Forms.Label RegisterRoomHeaderLabel;
         private System.Windows.Forms.Button ClearBtn;
-        private System.Windows.Forms.Panel RegisterRoomHeaderPanel;
         private System.Windows.Forms.Label WarningLabel;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button DeleteRowBtn;

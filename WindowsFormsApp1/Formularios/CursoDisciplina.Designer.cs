@@ -121,11 +121,11 @@
             // 
             // DeleteBtn
             // 
-            this.DeleteBtn.Location = new System.Drawing.Point(255, 445);
+            this.DeleteBtn.Location = new System.Drawing.Point(12, 217);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(738, 23);
+            this.DeleteBtn.Size = new System.Drawing.Size(225, 23);
             this.DeleteBtn.TabIndex = 8;
-            this.DeleteBtn.Text = "Excluir Registro {}";
+            this.DeleteBtn.Text = "Excluir Registro";
             this.DeleteBtn.UseVisualStyleBackColor = true;
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
@@ -156,6 +156,7 @@
             this.Controls.Add(this.CursoCbx);
             this.Name = "CursoDisciplina";
             this.Text = "UsuarioDisciplina";
+            this.Load += new System.EventHandler(this.CursoDisciplina_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

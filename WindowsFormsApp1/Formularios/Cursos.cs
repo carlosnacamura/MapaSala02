@@ -30,20 +30,20 @@ namespace Formulario
             get
             {
                 CursosEntidade curso = new CursosEntidade();
-                curso.Id = (int)IdNUD.Value;
-                curso.Nome = NomeTbx.Text;
-                curso.Ativo=AtivoChk.Checked;
-                curso.Turno=TurnoTbx.Text;
-                curso.Sigla=SiglaTbx.Text;
+                curso.Id = (int)numId.Value;
+                curso.Nome = txtNome.Text;
+                curso.Ativo=chkAtivo.Checked;
+                curso.Turno=txtTurno.Text;
+                curso.Sigla=txtSigla.Text;
                 return curso;
             }
             set
             {
-                IdNUD.Value = value.Id;
-                NomeTbx.Text = value.Nome;
-                SiglaTbx.Text = value.Sigla;
-                TurnoTbx.Text = value.Turno;
-                AtivoChk.Checked = value.Ativo;
+                numId.Value = value.Id;
+                txtNome.Text = value.Nome;
+                txtSigla.Text = value.Sigla;
+                txtTurno.Text = value.Turno;
+                chkAtivo.Checked = value.Ativo;
             }
         }
 
@@ -59,10 +59,10 @@ namespace Formulario
         }
         private void ClearBtn_Click(object sender, EventArgs e)
         {
-            NomeTbx.Text = "";
-            SiglaTbx.Text = "";
-            TurnoTbx.Text = "";
-            AtivoChk.Checked = false;
+            txtNome.Text = "";
+            txtSigla.Text = "";
+            txtTurno.Text = "";
+            chkAtivo.Checked = false;
         }
         private void UpdateSelectedCellsVar()
         {
@@ -87,7 +87,7 @@ namespace Formulario
             Cadastro = curso;
 
         }
-        private void DeleteRowBtn_Click(object sender, EventArgs e) => conn.DeleteAndUpdateDataTable((int)IdNUD.Value, ref Table);
+        private void DeleteRowBtn_Click(object sender, EventArgs e) => conn.DeleteAndUpdateDataTable((int)numId.Value, ref Table);
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
@@ -103,5 +103,9 @@ namespace Formulario
             conn.SearchAndUpdateDataTable(SearchTbx.Text, ref Table);
         }
 
+        private void Cursos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -83,5 +83,10 @@ namespace WindowsFormsApp1.Formularios
         {
             cursoDisciplinaConn.DeleteAndUpdateDataTable(Cadastro.Id, ref Table);
         }
+
+        private void CursoDisciplina_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
