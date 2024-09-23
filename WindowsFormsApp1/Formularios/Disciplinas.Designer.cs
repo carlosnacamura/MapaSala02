@@ -1,5 +1,4 @@
-﻿
-namespace Formulario
+﻿namespace Formulario
 {
     partial class DisciplinasEntidade
     {
@@ -29,6 +28,7 @@ namespace Formulario
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSigla = new System.Windows.Forms.TextBox();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
@@ -43,166 +43,145 @@ namespace Formulario
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panelInput = new System.Windows.Forms.Panel();
+            this.panelButtons = new System.Windows.Forms.Panel();
+
             ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
+            this.panelInput.SuspendLayout();
+            this.panelButtons.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(12, 82);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(167, 20);
-            this.txtNome.TabIndex = 1;
-            // 
-            // txtSigla
-            // 
-            this.txtSigla.Location = new System.Drawing.Point(12, 121);
-            this.txtSigla.Name = "txtSigla";
-            this.txtSigla.Size = new System.Drawing.Size(167, 20);
-            this.txtSigla.TabIndex = 2;
-            // 
-            // chkAtivo
-            // 
-            this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(12, 156);
-            this.chkAtivo.Name = "chkAtivo";
-            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 3;
-            this.chkAtivo.Text = "Ativo";
-            this.chkAtivo.UseVisualStyleBackColor = true;
-            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged);
-            // 
+
+            // Table
+            this.Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table.Location = new System.Drawing.Point(250, 20);
+            this.Table.Name = "Table";
+            this.Table.Size = new System.Drawing.Size(750, 300);
+            this.Table.TabIndex = 6;
+            this.Table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Table_CellClick);
+
+            // Panel for Inputs
+            this.panelInput.Controls.Add(this.label2);
+            this.panelInput.Controls.Add(this.numId);
+            this.panelInput.Controls.Add(this.label1);
+            this.panelInput.Controls.Add(this.txtNome);
+            this.panelInput.Controls.Add(this.label3);
+            this.panelInput.Controls.Add(this.txtSigla);
+            this.panelInput.Controls.Add(this.chkAtivo);
+            this.panelInput.Controls.Add(this.label4);
+            this.panelInput.Controls.Add(this.SearchTbx);
+            this.panelInput.Location = new System.Drawing.Point(15, 20);
+            this.panelInput.Name = "panelInput";
+            this.panelInput.Size = new System.Drawing.Size(220, 240);
+            this.panelInput.TabIndex = 26;
+
+            // Panel for Buttons
+            this.panelButtons.Controls.Add(this.btnCadastrar);
+            this.panelButtons.Controls.Add(this.EditRowBtn);
+            this.panelButtons.Controls.Add(this.DeleteRowBtn);
+            this.panelButtons.Controls.Add(this.ClearBtn);
+            this.panelButtons.Location = new System.Drawing.Point(15, 270);
+            this.panelButtons.Name = "panelButtons";
+            this.panelButtons.Size = new System.Drawing.Size(220, 120);
+            this.panelButtons.TabIndex = 27;
+            this.panelButtons.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+
             // btnCadastrar
-            // 
-            this.btnCadastrar.Location = new System.Drawing.Point(3, 222);
+            this.btnCadastrar.Location = new System.Drawing.Point(0, 0);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(167, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(165, 23);
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
+
             // ClearBtn
-            // 
-            this.ClearBtn.Location = new System.Drawing.Point(3, 251);
+            this.ClearBtn.Location = new System.Drawing.Point(0, 90);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(167, 23);
+            this.ClearBtn.Size = new System.Drawing.Size(165, 23);
             this.ClearBtn.TabIndex = 5;
             this.ClearBtn.Text = "Limpar";
             this.ClearBtn.UseVisualStyleBackColor = true;
             this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
-            // 
-            // Table
-            // 
-            this.Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Table.Location = new System.Drawing.Point(252, 12);
-            this.Table.Name = "Table";
-            this.Table.Size = new System.Drawing.Size(536, 320);
-            this.Table.TabIndex = 6;
-            this.Table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Table_CellClick);
-            // 
-            // numId
-            // 
-            this.numId.Location = new System.Drawing.Point(12, 38);
-            this.numId.Name = "numId";
-            this.numId.Size = new System.Drawing.Size(167, 20);
-            this.numId.TabIndex = 7;
-            // 
+
             // DeleteRowBtn
-            // 
-            this.DeleteRowBtn.Location = new System.Drawing.Point(3, 280);
+            this.DeleteRowBtn.Location = new System.Drawing.Point(0, 60);
             this.DeleteRowBtn.Name = "DeleteRowBtn";
-            this.DeleteRowBtn.Size = new System.Drawing.Size(167, 23);
+            this.DeleteRowBtn.Size = new System.Drawing.Size(165, 23);
             this.DeleteRowBtn.TabIndex = 8;
-            this.DeleteRowBtn.Text = "Excluir linha atual";
+            this.DeleteRowBtn.Text = "Excluir Registro atual";
             this.DeleteRowBtn.UseVisualStyleBackColor = true;
             this.DeleteRowBtn.Click += new System.EventHandler(this.DeleteRowBtn_Click);
-            // 
+
             // EditRowBtn
-            // 
-            this.EditRowBtn.Location = new System.Drawing.Point(3, 309);
+            this.EditRowBtn.Location = new System.Drawing.Point(0, 30);
             this.EditRowBtn.Name = "EditRowBtn";
-            this.EditRowBtn.Size = new System.Drawing.Size(167, 23);
+            this.EditRowBtn.Size = new System.Drawing.Size(165, 23);
             this.EditRowBtn.TabIndex = 9;
-            this.EditRowBtn.Text = "Editar linha";
+            this.EditRowBtn.Text = "Editar Registro";
             this.EditRowBtn.UseVisualStyleBackColor = true;
             this.EditRowBtn.Click += new System.EventHandler(this.EditRowBtn_Click);
-            // 
+
             // SearchTbx
-            // 
             this.SearchTbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.SearchTbx.Location = new System.Drawing.Point(12, 196);
+            this.SearchTbx.Location = new System.Drawing.Point(80, 150);
             this.SearchTbx.Name = "SearchTbx";
-            this.SearchTbx.Size = new System.Drawing.Size(158, 20);
+            this.SearchTbx.Size = new System.Drawing.Size(120, 20);
             this.SearchTbx.TabIndex = 10;
             this.SearchTbx.TextChanged += new System.EventHandler(this.SearchTbx_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "ID";
-            // 
-            // label1
-            // 
+
+            // Labels and Controls for Inputs
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 12;
+            this.label1.Location = new System.Drawing.Point(0, 60);
             this.label1.Text = "Nome";
-            // 
-            // label3
-            // 
+
+            this.txtNome.Location = new System.Drawing.Point(80, 60);
+            this.txtNome.Size = new System.Drawing.Size(120, 20);
+
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Text = "Id";
+
+            this.numId.Location = new System.Drawing.Point(80, 0);
+            this.numId.Size = new System.Drawing.Size(120, 20);
+
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
-            this.label3.TabIndex = 13;
+            this.label3.Location = new System.Drawing.Point(0, 90);
             this.label3.Text = "Sigla";
-            // 
-            // label4
-            // 
+
+            this.txtSigla.Location = new System.Drawing.Point(80, 90);
+            this.txtSigla.Size = new System.Drawing.Size(120, 20);
+
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Location = new System.Drawing.Point(80, 120);
+            this.chkAtivo.Text = "Ativo";
+
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 14;
+            this.label4.Location = new System.Drawing.Point(0, 150);
             this.label4.Text = "Pesquisar";
-            // 
-            // DisciplinasEntidade
-            // 
+
+            // DisciplinasEntidade Form
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 344);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.SearchTbx);
-            this.Controls.Add(this.EditRowBtn);
-            this.Controls.Add(this.DeleteRowBtn);
-            this.Controls.Add(this.numId);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelInput);
+            this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.Table);
-            this.Controls.Add(this.ClearBtn);
-            this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.chkAtivo);
-            this.Controls.Add(this.txtSigla);
-            this.Controls.Add(this.txtNome);
             this.Name = "DisciplinasEntidade";
             this.Text = "Disciplinas";
+
             ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
+            this.panelInput.ResumeLayout(false);
+            this.panelInput.PerformLayout();
+            this.panelButtons.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
+
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtSigla;
         private System.Windows.Forms.CheckBox chkAtivo;

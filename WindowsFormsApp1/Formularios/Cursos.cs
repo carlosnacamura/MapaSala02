@@ -55,7 +55,6 @@ namespace Formulario
                 MessageBox.Show("Tem campo vazio aí!");
             }
             conn.InsertAndUpdateDataTable(Cadastro, ref Table);
-            //data.Rows.Add(curso.Linha());
         }
         private void ClearBtn_Click(object sender, EventArgs e)
         {

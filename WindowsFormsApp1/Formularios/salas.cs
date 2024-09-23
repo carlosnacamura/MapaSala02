@@ -88,7 +88,6 @@ namespace Formulario
             }
             if (PCsNumberEntry.Text ==PCsNumber_PlaceHolder)
             {
-                //! Char.IsDigit(PCsNumberEntry.Text,0) &&  !Char.IsDigit(PCsNumberEntry.Text,1) && 
                 SetWarning("O campo [número de pcs] está vazio");
                 return; 
             }

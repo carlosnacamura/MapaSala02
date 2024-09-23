@@ -29,7 +29,6 @@ namespace Formulario
             {
                 data.Columns.Add(attributes.Name);
             }
-            //InsertSampleRows();
             SetPlaceholders();
         }
         private void SetPlaceholders()

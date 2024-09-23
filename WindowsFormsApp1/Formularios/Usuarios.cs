@@ -26,7 +26,6 @@ namespace Formulario
                 data.Columns.Add(attributes.Name);
             }
             Table.DataSource = data;
-            //data.Rows.Add(1, "rafaelluna@hotmail.com", "4984984","rafael luna", true);
         }
 
         private UsuariosEntidade Cadastro
