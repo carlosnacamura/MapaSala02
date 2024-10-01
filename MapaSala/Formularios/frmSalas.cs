@@ -38,5 +38,6 @@ namespace MapaSala.Formularios
 
             dados.Add(sala);
         }
+        // dtGridSalas.DataSource = dao.Pesquisar(txtPesquisa.Text);
     }
 }

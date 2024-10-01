@@ -48,12 +48,10 @@ namespace MapaSala.DAO
 
                 try
                 {
-                    // Preenche o DataTable com os dados da consulta
                     adapter.Fill(dataTable);
                 }
                 catch (Exception ex)
                 {
-                    // Lida com erros, se necessário
                     throw new Exception("Erro ao acessar os dados: " + ex.Message);
                 }
             }
@@ -90,6 +88,48 @@ namespace MapaSala.DAO
             }
             Conexao.Close();
             return dt;
+        }
+         public DataTable Pesquisar(string pesquisa)
+        {
+            DataTable dt = new DataTable();
+            Conexao.Open();
+            string query = "";
+            if (string.IsNullOrEmpty(pesquisa))
+            {
+                query = "SELECT id, Nome, Sigla FROM Disciplinas order by Id desc";
+            }
+            else
+            {
+                query = $@"SELECT id, Nome, Sigla FROM Disciplinas 
+                           Where Nome like '%{pesquisa}%' OR Sigla LIKE '%{pesquisa}%' OR Id LIKE '%{pesquisa}%'
+                           Order by Id desc";
+            }
+            
+
+
+            SqlCommand comando = new SqlCommand(query, Conexao);
+
+            SqlDataReader Leitura = comando.ExecuteReader();
+
+            foreach (var atributos in typeof(DisciplinaEntidade).GetProperties())
+            {
+                dt.Columns.Add(atributos.Name);
+            }
+
+            if (Leitura.HasRows)
+            {
+                while (Leitura.Read())
+                {
+                    DisciplinaEntidade d = new DisciplinaEntidade();
+                    d.Id = Convert.ToInt32(Leitura[0]);
+                    d.Nome = Leitura[1].ToString();
+                    d.Apelido = Leitura[2].ToString();
+                    dt.Rows.Add(d.Linha());
+                }
+            }
+            Conexao.Close();
+            return dt;
+
         }
     }
 }

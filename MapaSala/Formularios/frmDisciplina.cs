@@ -17,7 +17,7 @@ namespace MapaSala.Formularios
     {
         DataTable dados;
         int LinhaSelecionada;
-        
+        DisciplinaDAO dao = new DisciplinaDAO();
 
         public frmDisciplina()
         {
@@ -29,9 +29,6 @@ namespace MapaSala.Formularios
                 dados.Columns.Add(atributos.Name);
             }
 
-            //dados.Rows.Add(1, "Matematica", "MAT", true);
-            //dados.Rows.Add(2, "Português", "PORT", true);
-            //dados.Rows.Add(3, "Física", "FIS", false);
 
             dtGridDisciplina.DataSource = dados;
             
@@ -83,5 +80,6 @@ namespace MapaSala.Formularios
             
             
         }
+        // dtGridDisciplina.DataSource = dao.Pesquisar(txtPesquisa.Text);
     }
 }

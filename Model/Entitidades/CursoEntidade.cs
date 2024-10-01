@@ -13,5 +13,9 @@ namespace Model.Entitidades
         public string Turno { get; set; }
         public string Sigla { get; set; }
         public bool Ativo { get; set; }
+        public object[] Linha()
+        {
+            return new object[] { Id, Nome, Sigla, Turno, Ativo };
+        }
     }
 }

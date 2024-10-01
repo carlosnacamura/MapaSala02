@@ -93,5 +93,48 @@ namespace MapaSala.DAO
             Conexao.Close();
             return dt;
         }
+        public DataTable Pesquisar(string pesquisa)
+        {
+            DataTable dt = new DataTable();
+            Conexao.Open();
+            string query = "";
+            if (string.IsNullOrEmpty(pesquisa))
+            {
+                query = "SELECT Id, Nome, NumeroComputadores, NumeroCadeiras FROM Salas order by Id desc";
+            }
+            else
+            {
+                query = $@"SELECT Id, Nome, NumeroComputadores, NumeroCadeiras FROM Salas
+                           Where Nome like '%{pesquisa}%' OR NumeroComputadores LIKE '%{pesquisa}%' OR NumeroCadeiras LIKE '%{pesquisa}%' OR Id LIKE '%{pesquisa}%'
+                           Order by Id desc";
+            }
+            
+
+
+            SqlCommand comando = new SqlCommand(query, Conexao);
+
+            SqlDataReader Leitura = comando.ExecuteReader();
+
+            foreach (var atributos in typeof(SalasEntidade).GetProperties())
+            {
+                dt.Columns.Add(atributos.Name);
+            }
+
+            if (Leitura.HasRows)
+            {
+                while (Leitura.Read())
+                {
+                    SalasEntidade s = new SalasEntidade();
+                    s.Id = Convert.ToInt32(Leitura[0]);
+                    s.Nome = Leitura[1].ToString();
+                    s.NumeroCadeiras = Convert.ToInt32(Leitura[2]);
+                    s.NumeroComputadores = Convert.ToInt32(Leitura[3]);
+                    dt.Rows.Add(s.Linha());
+                }
+            }
+            Conexao.Close();
+            return dt;
+
+        }
     }
 }

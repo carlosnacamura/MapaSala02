@@ -101,7 +101,9 @@ namespace MapaSala.DAO
             }
             else
             {
-                query = "SELECT Id, Nome, Apelido FROM Professores Where Nome like '%"+pesquisa+"%' Order by Id desc";
+                query = $@"SELECT Id, Nome, Apelido FROM Professores 
+                           Where Nome like '%{pesquisa}%' OR Apelido LIKE '%{pesquisa}%' OR Id LIKE '%{pesquisa}%'
+                           Order by Id desc";
             }
             
 
