@@ -79,10 +79,10 @@ namespace MapaSala.DAO
             {
                 while (Leitura.Read())
                 {
-                    ProfessoresEntidade p = new ProfessoresEntidade();
+                    DisciplinaEntidade p = new DisciplinaEntidade();
                     p.Id = Convert.ToInt32(Leitura[0]);
                     p.Nome = Leitura[1].ToString();
-                    p.Apelido = Leitura[2].ToString();
+                    p.Sigla = Leitura[2].ToString();
                     dt.Rows.Add(p.Linha());
                 }
             }
@@ -123,7 +123,7 @@ namespace MapaSala.DAO
                     DisciplinaEntidade d = new DisciplinaEntidade();
                     d.Id = Convert.ToInt32(Leitura[0]);
                     d.Nome = Leitura[1].ToString();
-                    d.Apelido = Leitura[2].ToString();
+                    d.Sigla = Leitura[2].ToString();
                     dt.Rows.Add(d.Linha());
                 }
             }

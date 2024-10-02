@@ -164,6 +164,7 @@ namespace MapaSala.Formularios
             this.Name = "frmDisciplina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDisciplina";
+            this.Load += new System.EventHandler(this.frmDisciplina_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplina)).EndInit();
             this.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using Model.Entitidades;
 using System.Data;
+using model.entidades;
 
 namespace MapaSala.DAO
 {
@@ -47,12 +48,10 @@ namespace MapaSala.DAO
 
                 try
                 {
-                    // Preenche o DataTable com os dados da consulta
                     adapter.Fill(dataTable);
                 }
                 catch (Exception ex)
                 {
-                    // Lida com erros, se necessário
                     throw new Exception("Erro ao acessar os dados: " + ex.Message);
                 }
             }
@@ -112,7 +111,7 @@ namespace MapaSala.DAO
 
             SqlDataReader Leitura = comando.ExecuteReader();
 
-            foreach (var atributos in typeof(ProfessoresEntidade).GetProperties())
+            foreach (var atributos in typeof().GetProperties())
             {
                 dt.Columns.Add(atributos.Name);
             }

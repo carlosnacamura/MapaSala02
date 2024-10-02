@@ -47,5 +47,10 @@ namespace MapaSala.Formularios
             AtualizaGrid(dao.ObterCursoDisciplina());
 
         }
+
+        private void FrmCursoDisciplina_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -51,6 +51,7 @@
     <Compile Include="DAO\DisciplinaDAO.cs" />
     <Compile Include="DAO\ProfessorDAO.cs" />
     <Compile Include="DAO\SalasDAO.cs" />
+    <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="Formularios\FrmCursoDisciplina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSalas.resx">
       <DependentUpon>frmSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MapaSala.resx">
       <DependentUpon>MapaSala.cs</DependentUpon>

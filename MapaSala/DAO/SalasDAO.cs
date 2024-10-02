@@ -52,12 +52,10 @@ namespace MapaSala.DAO
 
                 try
                 {
-                    // Preenche o DataTable com os dados da consulta
                     adapter.Fill(dataTable);
                 }
                 catch (Exception ex)
                 {
-                    // Lida com erros, se necessário
                     throw new Exception("Erro ao acessar os dados: " + ex.Message);
                 }
             }
@@ -69,7 +67,7 @@ namespace MapaSala.DAO
         {
             DataTable dt = new DataTable();
             Conexao.Open();
-            string query = "SELECT Nome , Turno, Sigla, Ativo FROM Cursos Order by Id desc";
+            string query = "SELECT Id,Nome,NumeroCadeiras,NumeroComputadores Ativo FROM Cursos Order by Id desc";
             SqlCommand comando = new SqlCommand(query, Conexao);
 
             SqlDataReader Leitura = comando.ExecuteReader();
@@ -83,11 +81,13 @@ namespace MapaSala.DAO
             {
                 while (Leitura.Read())
                 {
-                    ProfessoresEntidade p = new ProfessoresEntidade();
-                    p.Id = Convert.ToInt32(Leitura[0]);
-                    p.Nome = Leitura[1].ToString();
-                    p.Apelido = Leitura[2].ToString();
-                    dt.Rows.Add(p.Linha());
+                    SalasEntidade s = new SalasEntidade();
+                    s.Id = Convert.ToInt32(Leitura[0]);
+                    s.Nome = Leitura[1].ToString();
+                    s.NumeroCadeiras = Convert.ToInt32(Leitura[2]);
+                    s.NumeroComputadores= Convert.ToInt32(Leitura[3]);
+                    s.IsLab = Leitura[4].Checked;
+                    dt.Rows.Add(s.Linha());
                 }
             }
             Conexao.Close();
