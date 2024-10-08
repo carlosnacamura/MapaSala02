@@ -80,9 +80,9 @@ namespace MapaSala.Formularios
             // 
             this.dtCursoDisciplina.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtCursoDisciplina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtCursoDisciplina.Location = new System.Drawing.Point(12, 73);
+            this.dtCursoDisciplina.Location = new System.Drawing.Point(475, 17);
             this.dtCursoDisciplina.Name = "dtCursoDisciplina";
-            this.dtCursoDisciplina.Size = new System.Drawing.Size(841, 378);
+            this.dtCursoDisciplina.Size = new System.Drawing.Size(378, 434);
             this.dtCursoDisciplina.TabIndex = 5;
             // 
             // cbDisciplinas

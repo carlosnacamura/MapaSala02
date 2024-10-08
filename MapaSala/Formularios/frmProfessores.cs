@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MapaSala.DAO;
+using model.entidades;
 using Model.Entitidades;
 
 namespace MapaSala.Formularios
@@ -20,7 +21,7 @@ namespace MapaSala.Formularios
         {
             InitializeComponent();
             dados = new DataTable();
-            foreach (var atributos in typeof(CursoEntidade).GetProperties())
+            foreach (var atributos in typeof(ProfessoresEntidade).GetProperties())
             {
                 dados.Columns.Add(atributos.Name);
             }
@@ -32,13 +33,13 @@ namespace MapaSala.Formularios
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            CursoEntidade p = new CursoEntidade();
-            p.Id = Convert.ToInt32(numId.Value);
-            p.Apelido = txtApelido.Text;
-            p.Nome = txtNomeCompleto.Text;
+            ProfessoresEntidade c = new ProfessoresEntidade();
+            c.Id = Convert.ToInt32(numId.Value);
+            c.Apelido = txtApelido.Text;
+            c.Nome = txtNomeCompleto.Text;
 
             ProfessorDAO dao = new ProfessorDAO();
-            dao.Inserir(p);
+            dao.Inserir(c);
 
             dtGridProfessores.DataSource = dao.ObterProfessores();
 

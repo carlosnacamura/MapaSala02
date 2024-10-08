@@ -86,7 +86,7 @@ namespace MapaSala.DAO
                     s.Nome = Leitura[1].ToString();
                     s.NumeroCadeiras = Convert.ToInt32(Leitura[2]);
                     s.NumeroComputadores= Convert.ToInt32(Leitura[3]);
-                    s.IsLab = Leitura[4].Checked;
+                    s.IsLab = Convert.ToBoolean(Leitura[4]);
                     dt.Rows.Add(s.Linha());
                 }
             }

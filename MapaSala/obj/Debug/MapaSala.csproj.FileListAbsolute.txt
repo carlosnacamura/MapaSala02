@@ -17,3 +17,6 @@ C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSal
 C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.exe
 C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.pdb
 C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.frmUsuarios.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.Editar.FrmEditarDisciplina.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.Adicionar.FrmAdicionarDisciplina.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.Excluir.FrmEditorProfessor.resources

@@ -52,6 +52,30 @@
     <Compile Include="DAO\ProfessorDAO.cs" />
     <Compile Include="DAO\SalasDAO.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
+    <Compile Include="Formularios\Adicionar\FrmAdicionarDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Adicionar\FrmAdicionarDisciplina.Designer.cs">
+      <DependentUpon>FrmAdicionarDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Adicionar\FrmAdicionarProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Adicionar\FrmAdicionarProfessor.Designer.cs">
+      <DependentUpon>FrmAdicionarProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Editar\FrmEditarDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Editar\FrmEditarDisciplina.Designer.cs">
+      <DependentUpon>FrmEditarDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Editar\FrmEditorProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Editar\FrmEditorProfessor.Designer.cs">
+      <DependentUpon>FrmEditorProfessor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmCursoDisciplina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +120,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Adicionar\FrmAdicionarDisciplina.resx">
+      <DependentUpon>FrmAdicionarDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Adicionar\FrmAdicionarProfessor.resx">
+      <DependentUpon>FrmAdicionarProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Editar\FrmEditarDisciplina.resx">
+      <DependentUpon>FrmEditarDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Editar\FrmEditorProfessor.resx">
+      <DependentUpon>FrmEditorProfessor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCursoDisciplina.resx">
       <DependentUpon>FrmCursoDisciplina.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +180,10 @@
       <Project>{0bf79062-b7d1-4989-83c3-355222ba90e1}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios\Excluir\" />
+    <Folder Include="Formularios\Limpar\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

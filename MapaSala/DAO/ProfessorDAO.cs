@@ -111,7 +111,7 @@ namespace MapaSala.DAO
 
             SqlDataReader Leitura = comando.ExecuteReader();
 
-            foreach (var atributos in typeof().GetProperties())
+            foreach (var atributos in typeof(ProfessoresEntidade).GetProperties())
             {
                 dt.Columns.Add(atributos.Name);
             }
