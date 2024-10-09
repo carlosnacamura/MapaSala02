@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace MapaSala.Formularios.Adicionar
 {
-    public partial class FrmAdicionarProfessor : Form
+    public partial class FrmAdicionarSalas : Form
     {
-        public FrmAdicionarProfessor()
+        public FrmAdicionarSalas()
         {
             InitializeComponent();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmAdicionarProfessor_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

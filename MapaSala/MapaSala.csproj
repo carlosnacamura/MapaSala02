@@ -64,6 +64,18 @@
     <Compile Include="Formularios\Adicionar\FrmAdicionarProfessor.Designer.cs">
       <DependentUpon>FrmAdicionarProfessor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Adicionar\FrmAdicionarSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Adicionar\FrmAdicionarSalas.Designer.cs">
+      <DependentUpon>FrmAdicionarSalas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Adicionar\FrmAdicionarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Adicionar\FrmAdicionarUsuarios.Designer.cs">
+      <DependentUpon>FrmAdicionarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Editar\FrmEditarDisciplina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Adicionar\FrmAdicionarProfessor.resx">
       <DependentUpon>FrmAdicionarProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Adicionar\FrmAdicionarSalas.resx">
+      <DependentUpon>FrmAdicionarSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Adicionar\FrmAdicionarUsuarios.resx">
+      <DependentUpon>FrmAdicionarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Editar\FrmEditarDisciplina.resx">
       <DependentUpon>FrmEditarDisciplina.cs</DependentUpon>
