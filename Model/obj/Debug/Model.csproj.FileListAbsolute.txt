@@ -1,0 +1,12 @@
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\Model\bin\Debug\Model.dll
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\Model\bin\Debug\Model.pdb
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\Model\obj\Debug\Model.dll
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\Model\obj\Debug\Model.pdb
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\Model\bin\Debug\Model.dll
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\Model\bin\Debug\Model.pdb
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\Model\obj\Debug\Model.dll
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\Model\obj\Debug\Model.pdb
