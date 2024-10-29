@@ -1,0 +1,48 @@
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.csproj.AssemblyReference.cache
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.FrmCursoDisciplina.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.frmDisciplina.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.frmProfessores.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.frmSalas.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.MapaSala.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Principal.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Properties.Resources.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.csproj.GenerateResource.cache
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\bin\Debug\MapaSala.exe.config
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\bin\Debug\MapaSala.exe
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\bin\Debug\MapaSala.pdb
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\bin\Debug\Model.dll
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\bin\Debug\Model.pdb
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.csproj.CopyComplete
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.exe
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.pdb
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.frmUsuarios.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.Editar.FrmEditarDisciplina.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.Adicionar.FrmAdicionarDisciplina.resources
+C:\Users\Aluno\Source\Repos\carlosnacamura\MapaSala02\MapaSala\obj\Debug\MapaSala.Formularios.Excluir.FrmEditorProfessor.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.csproj.AssemblyReference.cache
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.Adicionar.FrmAdicionarDisciplina.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.Adicionar.FrmAdicionarProfessor.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.Adicionar.FrmAdicionarSalas.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.Adicionar.FrmAdicionarUsuarios.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.Editar.FrmEditarDisciplina.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.Editar.FrmEditarSalas.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.FrmCursoDisciplina.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.frmDisciplina.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.frmProfessores.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.frmSalas.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.frmUsuarios.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.MapaSala.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Principal.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Properties.Resources.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.csproj.GenerateResource.cache
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.csproj.CoreCompileInputs.cache
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.exe
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.pdb
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\bin\Debug\MapaSala.exe.config
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\bin\Debug\MapaSala.exe
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\bin\Debug\MapaSala.pdb
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\bin\Debug\Model.dll
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\bin\Debug\Model.pdb
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.Formularios.Excluir.FrmEditarProfessor.resources
+D:\Tarefas\Desenvolvimento de Sistemas\MapaSala02-main\MapaSala\obj\Debug\MapaSala.csproj.CopyComplete
